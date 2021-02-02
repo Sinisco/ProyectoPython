@@ -119,5 +119,5 @@ if filter_NHG != "Selecciona un vecindario":
         filterPrice = st.slider("Filtrar por precio", dfFiltrado['price'].min(), dfFiltrado['price'].max(), [dfFiltrado['price'].min(), dfFiltrado['price'].max()])
         st.map(dfFiltrado[(dfFiltrado['price'] >= filterPrice[0]) & (dfFiltrado['price'] <= filterPrice[1])])
 else:
-    filterPrice = st.slider("Filtrar por precio", float(df['price'].min()), float(df['price'].max()), float([df['price'].min()), float(df['price'].max())])
+    filterPrice = st.slider("Filtrar por precio", float(df['price'].min()), float(df['price'].max()), [float(df['price'].min()), float(df['price'].max())])
     st.map(df[(df['price'] >= float(filterPrice[0])) & (df['price'] <= float(filterPrice[1]))])
