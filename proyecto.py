@@ -87,7 +87,8 @@ if filtro_NH != 'Selecciona una colonia' :
 else:
     top_5 = dfFiltrado.head()
     st.image(images, caption=list(top_5['name']), width=64, use_column_width=True)
-    
+st.write(top_5)
+
 # Distribución de precios por alojamiento
 st.subheader("Distribución de los precios por alojamiento y vecindario")
 st.text("La siguiente gráfica nos muestra la distribución de los tipos de alojamientos \n" + 
